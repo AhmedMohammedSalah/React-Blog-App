@@ -28,7 +28,12 @@ const Header = () => {
               <Nav className="ms-auto">
                 <Dlink slug="/" title={"Home"} end />
                 <Dlink slug="/blog" title={"Blog"} end />
-                {!isAuth && <Dlink slug="/login" title={"Login"} end />}
+                  {!isAuth && (
+                  <>
+                    <Dlink slug="/login" title={"Login"} end />
+                    <Dlink slug="/register" title={"signup"} end />
+                  </>
+                )}
                 {isAuth && <Dlink slug="/blog/new" title={"New Post"} end />}
                 {isAuth && (
                   <Button variant="outline-warning" onClick={logout}>
