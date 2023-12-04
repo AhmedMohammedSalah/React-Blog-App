@@ -1,0 +1,12 @@
+.header{
+}
+.header :global(.Header_navLink__NcbdE) img{
+    height: 40px;
+}.navLink {
+    color: #bdbdbd;
+    text-decoration: none;
+}.navLink:hover {
+    color: #fff;
+}.navLink:global(.active) {
+    color: #fff;
+}
