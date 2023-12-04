@@ -12,6 +12,7 @@ const MainBlog = () => {
        fetch();
        isMount.current = true;
      }
+   // eslint-disable-next-line react-hooks/exhaustive-deps
    }, []);
   const blogObserverRef=useRef(null)
   useEffect(() => {
@@ -25,6 +26,7 @@ const MainBlog = () => {
     },{})
     if(blogObserverRef.current)observer.observe(blogObserverRef.current);
     return () => {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     if (blogObserverRef.current) observer.unobserve(blogObserverRef.current);
 
     };

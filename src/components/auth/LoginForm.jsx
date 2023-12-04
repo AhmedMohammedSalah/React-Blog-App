@@ -26,7 +26,7 @@ const LoginForm = () => {
 
                     isAuth && nav( "/" );
                 } catch (error) {
-                    alert(error.message);
+                    alert("Invalid email or password ");
                 }
             }
         }

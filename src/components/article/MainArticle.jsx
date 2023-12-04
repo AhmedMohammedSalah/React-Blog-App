@@ -21,6 +21,7 @@ const MainArticle = () => {
             getData();
         }
         isMount.current=true
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [] );
     if ( loading ) return (
         

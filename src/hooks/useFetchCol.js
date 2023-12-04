@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useState } from 'react'
+import{ useCallback, useContext, useState } from 'react'
 import { FirebaseContext } from '../context/FirebaseContext';
 import { collection, getDocs, limit, orderBy, query, startAfter } from 'firebase/firestore';
 
@@ -41,6 +41,7 @@ const useFetchCol = (colName) => {
         }
         setLoading( false );
 
+   // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [] )
     const getNextData = useCallback( async (lastVisable) => {
         setFetching( true );
@@ -72,7 +73,7 @@ const useFetchCol = (colName) => {
 
         }
         setFetching( false );
-
+   // eslint-disable-next-line react-hooks/exhaustive-deps
         },[])
     return {
         loading,error,data,getData,lastDoc,getNextData,fetching
